@@ -19,3 +19,4 @@ Scripts included for the following commands:
 - Move all files beginning with an uppercase letter to the directory /tmp/u
 - Deletes all files in the current working directory that end with the character ~
 - Creates the directories welcome/, welcome/to/ and welcome/to/school in the current directory
+- Lists current directory files with directory indicators in a comma-separated sorted list
