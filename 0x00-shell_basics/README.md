@@ -11,3 +11,4 @@ Scripts included for the following commands:
 - Move the file betty from /tmp/ to /tmp/my_first_directory
 - Delete the file betty from /tmp/my_first_directory
 - Delete the directory my_first_directory from /tmp
+- Change directory to the previous one
