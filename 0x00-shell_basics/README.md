@@ -12,7 +12,7 @@ Scripts included for the following commands:
 - Delete the file betty from /tmp/my_first_directory
 - Delete the directory my_first_directory from /tmp
 - Change directory to the previous one
-- Lists current directory files and /boot files
+- Lists current directory files, parent directory files and /boot files
 - Prints the type of the file named iamafile in /tmp
 - Create a symbolic link to /bin/ls named __ls__
 - Copies some HTML files
