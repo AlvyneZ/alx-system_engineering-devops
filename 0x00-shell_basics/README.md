@@ -16,3 +16,4 @@ Scripts included for the following commands:
 - Prints the type of the file named iamafile in /tmp
 - Create a symbolic link to /bin/ls named __ls__
 - Copies some HTML files
+- Move all files beginning with an uppercase letter to the directory /tmp/u
