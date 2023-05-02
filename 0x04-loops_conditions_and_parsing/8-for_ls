@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Uses for loop to display contents of current directory ignoring
+#  the part of the name before first dash
+for file in *
+do
+	echo "$file" | cut -d '-' -f 2-
+done
