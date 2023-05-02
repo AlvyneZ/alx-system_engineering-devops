@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Uses nested while loops to display Hours from 0 to 12
+#  and minutes from 1 to 59 for each hour for 12hrs 59min
+h=0
+while (( h<=12 ))
+do
+	echo "Hour: $h"
+	m=1
+	while (( m<60 ))
+	do
+		echo "$m"
+		m=$(( m+1 ))
+	done
+	h=$(( h+1 ))
+done
