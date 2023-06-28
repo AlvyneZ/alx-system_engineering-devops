@@ -16,6 +16,6 @@ sudo chmod 644 /var/www/html/index.nginx-debian.html
 redirect_page="https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent"
 redirect_text="\\\trewrite ^/redirect_me $redirect_page;"
 nginx_conf="/etc/nginx/sites-available/default"
-sed -i "/listen \[\:\:\]\:80 default_server;/a $redirect_text" $nginx_conf
+sudo sed -i "/listen \[\:\:\]\:80 default_server;/a $redirect_text" $nginx_conf
 # To refresh the caches and pick up new changes
 sudo service nginx restart
