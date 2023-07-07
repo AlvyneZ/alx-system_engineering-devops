@@ -3,3 +3,4 @@
 sudo kill "$(pgrep "nginx")"
 sudo sed -i -r "s/(listen \[*:*]*:*)8080/\180/g" /etc/nginx/sites-enabled/default
 sudo service nginx restart
+sudo mv /run/nginx.pid /run/nginx.pid.original
