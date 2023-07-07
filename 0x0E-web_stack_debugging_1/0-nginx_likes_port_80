@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-# Setting the correct port number (80) in the enabled site
-sudo kill "$(pgrep "nginx")"
-sudo sed -i -r "s/(listen \[*:*]*:*)8080/\180/g" /etc/nginx/sites-enabled/default
+# Switching to sites-available (@ port 80) instead of enabled
+sudo sed -i "s/sites-enabled/sites-available/" /etc/nginx/nginx.conf
 sudo service nginx restart
-sudo mv /run/nginx.pid /run/nginx.pid.original
