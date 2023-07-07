@@ -3,7 +3,7 @@
 
 subdmninfo () {
    dnsentry="$(dig "$2.$1" | grep -A1 'ANSWER SECTION:')"
-   sbdmn="The subdomain $2.$1 is a "
+   sbdmn="The subdomain $2 is a "
    echo "$dnsentry" | awk "NR==2 {print \"$sbdmn\" \$4 \" record and points to \" \$5}"
 }
 
