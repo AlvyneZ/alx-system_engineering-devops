@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Getting details of subdomains
+
+subdmninfo () {
+   dnsentry="$(dig "$2.$1" | grep -A1 'ANSWER SECTION:')"
+   sbdmn="The subdomain $2.$1 is a "
+   echo "$dnsentry" | awk "NR==2 {print \"$sbdmn\" \$4 \" record and points to \" \$5}"
+}
+
+if [ -z "$1" ]
+then
+  exit
+fi
+
+if [ -z "$2" ]
+then
+  subdmninfo "$1" "www"
+  subdmninfo "$1" "lb-01"
+  subdmninfo "$1" "web-01"
+  subdmninfo "$1" "web-02"
+else
+  subdmninfo "$1" "$2"
+fi
