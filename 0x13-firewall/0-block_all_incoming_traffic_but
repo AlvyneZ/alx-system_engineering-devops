@@ -2,8 +2,8 @@
 # Enabling firewall and allowing SSH, HTTP and HTTPS ports
 
 # Allowing OpenSSH (22/tcp) through the firewall
-sudo ufw allow 'OpenSSH'
-# Allowing Nginx (80,443/tcp) through the firewall
-sudo ufw allow 'Nginx Full'
+sudo ufw allow 22/tcp
+# Allowing Nginx Full (80,443/tcp) through the firewall
+sudo ufw allow 80,443/tcp
 # Enabling the firewall
 sudo ufw enable
