@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Enabling firewall and allowing SSH, HTTP and HTTPS ports
+
+# Allowing OpenSSH (22/tcp) through the firewall
+sudo ufw allow 'OpenSSH'
+# Allowing Nginx (80,443/tcp) through the firewall
+sudo ufw allow 'Nginx Full'
+# Enabling the firewall
+sudo ufw enable
