@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Running Nginx as Nginx
+
+# Adding read and write permissions to nginx config file
+sudo chmod 644 /etc/nginx/nginx.conf
+# Setting user for pid
+sudo sed -i "s/#user www-data/user ngnix/" /etc/nginx/nginx.conf
+# Using port 8080
+sudo sed -i -r "s/(listen \[*:*]*:*)80/\18080/g" /etc/nginx/sites-available/default
+# Stopping apache2 listening on 8080
+sudo pkill apache2
+#Restarting nginx as nginx user
+sudo -u nginx service nginx restart
